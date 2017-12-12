@@ -4525,3 +4525,9 @@ nav.menu-nav .top-nav>ul>li>a{
     visibility: visible;
   }
 }
+
+/* "About page" */
+.top-orange {
+    margin: 0;
+    padding: 0;
+}
