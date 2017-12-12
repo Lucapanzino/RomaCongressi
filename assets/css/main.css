@@ -12,6 +12,12 @@
     src: url("../fonts/Didot-Regular.ttf");
 }
 
+@font-face {
+  font-family: Didot_Bold;
+    src: url("../fonts/Didot-Bold.ttf");
+}
+
+
 
 /* Reset */
 
@@ -2738,7 +2744,7 @@ header > h4 + p {
 }
 
 header.major {
-  margin: 0 0 4rem 0;
+  /*margin: 0 0 4rem 0;*/
   text-align: center;
 }
 
@@ -2748,8 +2754,11 @@ header.major > :last-child {
 
 header.major > p {
   margin-top: 0;
-  text-align: center;
+  text-align: justify;
+  font-family: Didot_Regular, Helvetica, sans-serif;
+    font-size: 1.5em;
 }
+ 
 
 header.major > .date {
   font-size: 1rem;
@@ -3567,7 +3576,7 @@ nav.menu-nav .top-nav>ul>li>a{
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   display: block;
   font-size: 12px;
-  font-family: Didot_Regular;
+  font-family: Didot_Regular, Helvetica, sans-serif;;
   font-weight: lighter;
   text-transform: initial;
   outline: none;
@@ -4528,6 +4537,33 @@ nav.menu-nav .top-nav>ul>li>a{
 
 /* "About page" */
 .top-orange {
-    margin: 0;
+    margin: 2px 0;
     padding: 0;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.menu-nav  ul.links li:not(:first-child) a::before {
+	content: "|";
+	margin-right: 10px;
+}
+
+article.post {
+    margin: 3em auto;
+}
+
+ .post>.major{
+	max-width: 850px;
+	margin: 0 auto 4em;
+}
+
+.major>h2{
+	text-transform: inherit;
+	font-family: Didot_bold,Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 2.5em;
 }

@@ -10,6 +10,8 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="stylesheet" href="assets/css/main.css"/>
+		<link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 	</head>
 	<body class="is-loading">
@@ -50,14 +52,20 @@
 
 			</nav>
 			<header>
-				<div style="background:url('images/header-about-1.jpg') center no-repeat;background-size:cover;width:100vw;height:810px;"></div>
+				<div id="owl-demo" class="owl-carousel owl-theme">
+
+					<div class="item"><img src=" images/header-about-1.jpg" alt=" "></div>
+					<div class="item"><img src=" images/home-header.jpg" alt=" "></div>
+					<div class="item"><img src=" images/header-about-1.jpg" alt=" "></div>
+
+				</div>
 			</header>
 
 			<!-- Main -->
 			<div>
 
 				<!-- Featured Post -->
-				<article class="">
+				<article class="post">
 					<header class="major">
 						<h2>
 							<a href="#">Roma Congressi</a>
@@ -74,14 +82,12 @@
 
 				</article>
 
-				<article class="">
+				<article class="post">
 					<header class="major">
 						<h2>
 							<a href="#">Roma Congressi</a>
 						</h2>
-						<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br/>
-							facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br/>
-							amet nullam sed etiam veroeros.</p>
+						<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor amet nullam sed etiam veroeros.</p>
 					</header>
 					<div class="feat-img">
 						<a href="#" class="image main"><img src="images/pic01.jpg" alt=""/></a>
@@ -89,7 +95,7 @@
 
 				</article>
 
-				<article class="">
+				<article class="post">
 					<header class="major">
 						<h2>
 							<a href="#">Servizi</a>
@@ -136,6 +142,24 @@
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/owl.carousel.js"></script>
+		<script type="text/javascript">
+
+			$("#owl-demo").owlCarousel({
+
+				navigation: true, // Show next and prev buttons
+
+				slideSpeed: 300,
+				paginationSpeed: 400,
+
+				items: 1,
+				itemsDesktop: false,
+				itemsDesktopSmall: false,
+				itemsTablet: false,
+				itemsMobile: false
+
+			});
+		</script>
 
 	</body>
 </html>
