@@ -4610,6 +4610,30 @@ article.post.featured {
     margin: 10em 0 7em;
 }
 
+.round-image-box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 2em auto 6em;
+}
+
+.round-container{
+    margin: 0 2.5em;
+}
+
+.round-container>h4 {
+    font-family: Didot_Regular;
+    text-transform: initial;
+    padding-top: 1em;
+}
+
+.round-image{
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    background-color: #989898;
+}
+
 @media screen and (max-width: 980px){
     .post>header{
         max-width: 850px;
