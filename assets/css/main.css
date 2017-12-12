@@ -1679,7 +1679,6 @@ a {
   -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  border-bottom: dotted 1px;
   text-decoration: none;
 }
 
@@ -3069,6 +3068,21 @@ body.is-loading #wrapper.fade-in:before {
   position: absolute;
   top: 17em;
 }
+.slogan>h1::before,.slogan>h1::after{
+	font-size: 3.5em;
+	position: relative;
+    top: -38px;
+}
+.slogan>h1::before{
+	content: "\201c";
+	float: left;
+	
+}
+.slogan>h1::after{
+	content: "\201d";
+	float: right;
+	left: -64px;
+}
 
 #intro {
   color: #ffffff;
@@ -3097,7 +3111,7 @@ body.is-loading #wrapper.fade-in:before {
   cursor: default;
   text-align: center;
   z-index: 1;
-  min-height: 83vh;
+  min-height: 97vh;
   background: url("../../images/home-header.jpg") center no-repeat;
   background-size: cover;
 }
@@ -3175,19 +3189,35 @@ body.is-loading #wrapper.fade-in:before {
 }
 
 #intro nav.menu-nav {
-  position: absolute;
-  top: 0;
-  max-width: 100vw;
-  margin-top: 0;
+	position: absolute;
+      top: 0;
+      width: 100vw;
+      margin-top: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+	  min-height: 88px;
 }
 
 #intro nav.menu-nav  ul.links li a {
   color: #ffffff;
 }
 
+#intro nav.menu-nav ul.links li:not(:first-child) a::before {
+    content: "|";
+    padding-right: 1em;
+}
+
+
+@media screen and (max-width:980px) {
+	#intro nav.menu-nav  ul.links {
+	  display:none;
+	}
+}
+
 #intro h1 {
   font-size: 38px;
-			/* line-height: 1; */
+			 line-height: 1.5; 
   font-family: CooperHewitt_Light;
   text-transform: inherit;
   font-weight: 100;
@@ -3260,7 +3290,7 @@ body.is-loading #intro:not(.hidden) + #header + .menu-nav  {
 
   #intro {
     padding: 4rem 4rem 2rem 4rem;
-    min-height: 90vh;
+    min-height: 97vh;
   }
 
   #intro p br {
@@ -3276,13 +3306,16 @@ body.is-loading #intro:not(.hidden) + #header + .menu-nav  {
 
   #intro {
     padding: 3rem 2rem 1rem 2rem;
-    min-height: 80vh;
+    /*min-height: 80vh;*/
   }
 
   #intro h1 {
-    font-size: 3.25rem;
-    line-height: 1.1;
+    font-size: 2.25rem;
+    /*line-height: 1.1;*/
     margin-bottom: 1rem;
+  }
+  .slogan>h1::after{
+	  left: 0;
   }
 
   #intro p {
@@ -3418,6 +3451,7 @@ nav.menu-nav .top-nav {
     flex-flow: row nowrap;
     width: 100vw;
     justify-content: space-around;
+	min-height: 88px;
 }
 nav.menu-nav .top-nav>ul>li>a{
 	border-left: 1px solid #ffffff;
@@ -3445,6 +3479,7 @@ nav.menu-nav .top-nav>ul>li>a{
     /*width: calc(100% - 4rem);*/
   max-width: 72rem;
   z-index: 2;
+  justify-content: space-around;
 }
 
 .menu-nav  ul.divided li {
@@ -3531,12 +3566,12 @@ nav.menu-nav .top-nav>ul>li>a{
   -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   font-family: Didot_Regular;
   font-weight: lighter;
   text-transform: initial;
   outline: none;
-  padding: 0 20px;
+  padding: 0 18px 0 0;
 }
 
 .menu-nav  ul.links li a:hover {
@@ -4278,6 +4313,13 @@ nav.menu-nav .top-nav>ul>li>a{
   }
 }
 
+@media screen and (max-width: 980px){
+
+  #copyright {
+    margin: 0 auto;
+  }
+}
+
 @media screen and (max-width: 480px) {
 
   #copyright ul li {
@@ -4347,7 +4389,8 @@ nav.menu-nav .top-nav>ul>li>a{
 }
 
 @media screen and (max-width: 736px) {
-
+	
+  	
   #navPanelToggle {
     font-size: 0.8rem;
     padding: 0.25rem 1rem;
