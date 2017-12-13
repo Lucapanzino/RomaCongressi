@@ -4690,3 +4690,40 @@ article.post.featured {
     padding-bottom: 20px;
     font-family: "Open Sans", sans-serif; 
 }
+
+/* Linguisti Service page 2 */
+
+ .flex-post {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.major.left-50,.major.right-50 {
+    width: 50%;
+}
+
+.major.left-50>p, .major.right-50>p {
+    font-size: 1em;
+    padding: 0 1em 0 0;
+}
+
+.image-right, .image-left {
+    width: 50%;
+    height: 343px;
+    max-width: 344px;
+}
+
+@media screen and (max-width: 980px) {
+    
+    .major.left-50,.major.right-50 {
+        width: 100%;
+        padding: 1em;
+    }
+    .image-right, .image-left {
+        width: 98%;
+        margin: 0 auto;
+    }
+}
