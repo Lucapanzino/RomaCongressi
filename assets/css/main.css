@@ -4554,6 +4554,7 @@ nav.menu-nav .top-nav>ul>li>a{
 
 article.post {
     margin: 3em auto;
+        max-width: 850px;
 }
 
  .post>.major{
@@ -4703,6 +4704,9 @@ article.post.featured {
 
 .major.left-50,.major.right-50 {
     width: 50%;
+}
+.major.left-50{
+    order: 1;
 }
 
 .major.left-50>p, .major.right-50>p {
