@@ -4618,7 +4618,7 @@ align-items: center;
 }
 
 article.post.featured {
-    margin: 10em 0 7em;
+    margin: 10em auto 7em;
 }
 
 .round-image-box{
@@ -4751,6 +4751,9 @@ article.post.featured {
     margin: 4em auto;
     justify-content: space-between;
 }
+.showcase-item {
+    margin-bottom: 2em;
+}
 
 @media screen and (max-width:840px){
     
@@ -4765,7 +4768,17 @@ article.post.featured {
 }
 
 @media screen and (max-width:560px){
+    .showcase-box {
+        justify-content: space-around;
+    }
+    
     .showcase-item:nth-child(odd) {
     margin-right: 0;
+}
+.showcase-item {
+    max-width: 40vw;
+    max-height: 40vw;
+    overflow: hidden;
+    margin: 1em;
 }
 }
