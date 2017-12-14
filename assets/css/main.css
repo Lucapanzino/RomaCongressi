@@ -4908,6 +4908,16 @@ article.map-container {
   background-color: #fff;
 }
 
+.address-item >ul{
+    list-style: none;
+    font-size: 13px;
+    font-family: Didot_Regular, Helvetica, sans-serif;
+}
+
+.address-item >ul,.address-item>h4 {
+    margin-left: 1em;
+}
+
 /* footer Desktop */
 
 .footer-lg {
